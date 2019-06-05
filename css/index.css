@@ -86,7 +86,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  font-size: 62.5%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -133,4 +133,142 @@ table {
 html,
 body {
   height: 100%;
+  font-family: 'Special Elite', cursive;
+}
+.flx-r {
+  display: flex;
+}
+.flx-c {
+  display: flex;
+  flex-direction: column;
+}
+.table-row-data tr {
+  border-top: 1px solid #d3d3d3;
+  height: 3rem;
+}
+.table-row-data tr td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+.container {
+  width: 800px;
+  margin-left: 10%;
+}
+.container nav {
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+}
+.container nav a {
+  color: black;
+  margin: 35px 0 0 25px;
+}
+.container header {
+  background-color: #e9ecef;
+  display: flex;
+  flex-direction: column;
+  padding: 8% 2% 8% 4%;
+}
+.container header img {
+  width: 70%;
+}
+.container header h1 {
+  font-size: 3.5rem;
+  margin-top: 1%;
+  padding: 2% 0 2% 0;
+}
+.container header h2 {
+  font-size: 1.5rem;
+}
+.container header hr {
+  height: 1px;
+  color: #808080;
+  margin: 3% 1% 3% 0;
+}
+.container header button {
+  margin-top: 3%;
+  height: 3.5rem;
+  width: 30%;
+  background-color: #808080;
+  color: #fff;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 0.25rem;
+}
+.container .main-top {
+  display: flex;
+}
+.container .main-top .col-left {
+  display: flex;
+  flex-direction: column;
+  margin: 4% 2% 4% 0;
+  width: 50%;
+}
+.container .main-top .col-left h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+.container .main-top .col-left ul {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+.container .main-top .col-right {
+  display: flex;
+  flex-direction: column;
+  margin: 4% 0;
+  width: 50%;
+}
+.container .main-top .col-right h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.container .main-top .col-right table {
+  width: 100%;
+  border: 1px solid #d3d3d3;
+}
+.container .main-top .col-right table tr {
+  border-top: 1px solid #d3d3d3;
+  height: 3rem;
+}
+.container .main-top .col-right table tr td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+.container .main-btm {
+  display: flex;
+  flex-direction: column;
+}
+.container .main-btm h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.container .main-btm table {
+  width: 100%;
+  text-align: left;
+}
+.container .main-btm table tr {
+  border-top: 1px solid #d3d3d3;
+  height: 3rem;
+}
+.container .main-btm table tr td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+.container .main-btm table th {
+  padding: 1rem;
+  vertical-align: middle;
+}
+.container .main-btm table tr:nth-child(even) {
+  background-color: #e9ecef;
+}
+.container footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #808080;
+  height: 5rem;
+  margin: 4% 0;
+}
+.container footer p {
+  color: #fff;
 }
