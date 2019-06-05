@@ -151,7 +151,7 @@ body {
   vertical-align: middle;
 }
 .container {
-  width: 800px;
+  max-width: 800px;
   margin-left: 10%;
 }
 .container nav {
@@ -198,11 +198,17 @@ body {
 .container .main-top {
   display: flex;
 }
+@media (max-width: 500px) {
+  .container .main-top {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .container .main-top .col-left {
   display: flex;
   flex-direction: column;
   margin: 4% 2% 4% 0;
-  width: 50%;
+  max-width: 50%;
 }
 .container .main-top .col-left h2 {
   font-size: 1.75rem;
@@ -216,7 +222,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 4% 0;
-  width: 50%;
+  max-width: 50%;
 }
 .container .main-top .col-right h3 {
   font-size: 1.25rem;
@@ -243,7 +249,7 @@ body {
   margin-bottom: 1rem;
 }
 .container .main-btm table {
-  width: 100%;
+  max-width: 100%;
   text-align: left;
 }
 .container .main-btm table tr {
