@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -54,6 +54,166 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-family: 'Special Elite', cursive;
 }
 
+// variables
+@heygray: #808080;
+@lgray: #d3d3d3;
+@solitude: #e9ecef;
+@wht: #fff;
+
+// mixins
+.flx-r {
+	display: flex;
+}
+
+.flx-c {
+	display: flex;
+	flex-direction: column;
+}
+
+.table-row-data {
+	tr {
+		border-top: 1px solid @lgray;
+		height: 3rem;			
+
+		td {
+			padding: 1rem;
+			vertical-align: middle;
+		}
+	}
+}
+
+// body 
+.container {
+	max-width: 800px;
+	margin-left: 10%;
+
+	nav {
+		height: 80px;
+		.flx-r();
+		justify-content: flex-end;
+		
+		a {
+			color: black;
+			margin: 35px 0 0 25px;
+		}
+	}
+
+	header {
+		background-color: @solitude;
+		.flx-c();
+		padding: 8% 2% 8% 4%;
+
+		img {
+			width: 70%;			
+		}
+
+		h1 {
+			font-size: 3.5rem;
+			margin-top: 1%;
+			padding: 2% 0 2% 0;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+		}
+
+		hr {
+			height: 1px;			
+			color: @heygray;
+			margin: 3% 1% 3% 0;
+		}
+
+		button {
+			margin-top: 3%;
+			height: 3.5rem;
+			width: 30%;
+			background-color: @heygray;
+			color: @wht;
+			font-size: 1.25rem;
+			border: none;
+			border-radius: .25rem;
+		}
+	}
+
+	.main-top {
+		.flx-r();
+		@media (max-width: 500px) {
+			.flx-c();
+		}
+		
+		.col-left {
+			.flx-c();
+			margin: 4% 2% 4% 0;
+			max-width: 50%;	
+			
+			h2 {
+				font-size: 1.75rem;
+				margin-bottom: 1rem;
+			}
+
+			ul {
+				list-style-type: circle;
+				list-style-position: inside;
+			}
+		}
+
+		.col-right {
+			.flx-c();
+			margin: 4% 0;
+			max-width: 50%;
+
+			h3 {
+				font-size: 1.25rem;
+				margin-bottom: 1rem;
+			}
+
+			table {
+				width: 100%;
+				border: 1px solid @lgray;
+				.table-row-data();
+			}
+		}
+	}
+
+	.main-btm {
+		.flx-c();
+
+		h3 {
+			font-size: 1.25rem;
+			margin-bottom: 1rem;
+		}
+
+		table {
+			max-width: 100%;
+			text-align: left;
+			.table-row-data();
+
+			th {
+				padding: 1rem;
+				vertical-align: middle;
+			}
+
+			tr:nth-child(even) {
+				background-color: @solitude;
+			}
+		}
+	}
+
+	footer {
+		.flx-r();
+		justify-content: center;
+		align-items: center;
+		background-color: @heygray;
+		height: 5rem;
+		margin: 4% 0;
+
+		p {
+			color: @wht;
+		}
+	}
+
+}
